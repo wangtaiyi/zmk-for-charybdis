@@ -10,6 +10,15 @@
 };
 
 / {
+    behaviors {
+        capslock: capslock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPSLOCK";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
